@@ -23,7 +23,7 @@ Solution:
 
 `sudo usermod -aG Hadoop`
 
-1. Install Java
+2. Install Java
 - First Update packages information
 
 `sudo apt update`
@@ -36,15 +36,15 @@ Solution:
 
 `java -version`
 
-1. Install Openssh on Ubuntu
+3. Install Openssh on Ubuntu
 
 `sudo apt install openssh-server openssh-client -y`
 
-1. Switch from current user to newly created user Hadoop
+4. Switch from current user to newly created user Hadoop
 
 `sudo su - hadoop`
 
-1. We need to setup password less ssh connection with the Hadoop user
+5. We need to setup password less ssh connection with the Hadoop user
 - Generate public private key pair for ssh connection
 
 `ssh-keygen -t rsa`
@@ -94,7 +94,7 @@ Solution:
 
 `ssh localhost`
 
-1. Install Hadoop from the official link
+6. Install Hadoop from the official link
 
 `wget [https://downloads.apache.org/hadoop/common/hadoop-3.3.2/hadoop-3.3.2.tar.gz](https://downloads.apache.org/hadoop/common/hadoop-3.3.1/hadoop-3.3.1.tar.gz)`
 
@@ -106,7 +106,7 @@ Solution:
 
 `mv hadoop-3.3.2 hadoop`
 
-1. Configure Java Environment variables for setting up Hadoop
+7. Configure Java Environment variables for setting up Hadoop
 
 `dirname $(dirname $(readlink -f $(which java)))`
 
@@ -118,7 +118,7 @@ Now we need to configure Hadoop
 
 .bashrc, [hadoop-env.sh](http://hadoop-env.sh/), core-site.xml, hdfs-site.xml, mapred-site-xml and yarn-site.xml
 
-1. .bashrc
+8. .bashrc
 - It is the configuration file for bash (Bourne Again Shell)
 - We need to add Paths for our hadoop to work properly
 
@@ -137,7 +137,7 @@ export HADOOP_OPTS="-Djava.library.path=$HADOOP_HOME/lib/native"`
 
 `source ~/.bashrc`
 
-1. hadoop-env.sh
+9. hadoop-env.sh
 - nano is cli editor you can use any other text editor as well like vim.
 
 `sudo nano $HADOOP_HOME/etc/hadoop/hadoop-env.sh`
@@ -166,7 +166,7 @@ Find where Java is installed, by executing
 
 Example : If Your output is like /usr/lib/jvm/java-11-openjdk-amd64/bin/javac then add /usr/lib/jvm/java-11-openjdk-amd64 to the file.
 
-1. core-site.xml
+10. core-site.xml
 
 `sudo vim $HADOOP_HOME/etc/hadoop/hadoop-env.sh`
 
@@ -181,7 +181,7 @@ Example : If Your output is like /usr/lib/jvm/java-11-openjdk-amd64/bin/javac th
 
 `</property>`
 
-1. hdfs-site.xml
+11. hdfs-site.xml
 
 `sudo nano $HADOOP_HOME/etc/hadoop/hdfs-site.xml`
 
@@ -202,7 +202,7 @@ Example : If Your output is like /usr/lib/jvm/java-11-openjdk-amd64/bin/javac th
 <value>file:///home/hadoop/hadoopdata/hdfs/datanode</value>
 </property>`
 
-1. mapred-site.xml
+12. mapred-site.xml
 
 `sudo nano $HADOOP_HOME/etc/hadoop/mapred-site.xml`
 
@@ -216,7 +216,7 @@ Example : If Your output is like /usr/lib/jvm/java-11-openjdk-amd64/bin/javac th
 
 `</property>`
 
-1. *yarn-site.xml*
+13. *yarn-site.xml*
 
 `sudo nano $HADOOP_HOME/etc/hadoop/yarn-site.xml`
 
@@ -230,11 +230,11 @@ Example : If Your output is like /usr/lib/jvm/java-11-openjdk-amd64/bin/javac th
 
 `</property>`
 
-1. Format NameNode
+14. Format NameNode
 
 `hdfs namenode -format`
 
-1. Start Hadoop Cluster
+15. Start Hadoop Cluster
 
 `start-dfs.sh` : to start distributed file system
 
@@ -268,7 +268,7 @@ The output of above code will look like
 <img width="233" alt="Screenshot_2023-01-26_at_11 59 01_PM" src="https://user-images.githubusercontent.com/88190547/224557139-980924ca-fca5-4d13-ad6d-d9ee43024d76.png">
 
 
-1. Access Hadoop Web UI
+16. Access Hadoop Web UI
 
 After all this steps, we can monitor Hadoop from the web interface by reaching below URL from browser
 
