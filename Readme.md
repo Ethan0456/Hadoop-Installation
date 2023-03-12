@@ -160,7 +160,7 @@ Find where Java is installed, by executing
 
 - Unix system too have concept of shortcuts, readlink gives the path of the actual file to which a shortcut directs
 
-![Screenshot 2023-01-26 at 11.36.18 PM.png](Hadoop%20Installation%20Steps%20879d72b111df4ca0a5c9cf45aace2f49/Screenshot_2023-01-26_at_11.36.18_PM.png)
+![./Hadoop-Installation-Steps/Screenshot 2023-01-26 at 11.36.18 PM.png](Hadoop%20Installation%20Steps%20879d72b111df4ca0a5c9cf45aace2f49/Screenshot_2023-01-26_at_11.36.18_PM.png)
 
 - In the above result the path before /bin/javac i.e. /usr/lib/jvm/java-8-openjdk-amd64 needs to be added in the hadoop-env.sh
 
@@ -241,7 +241,7 @@ Example : If Your output is like /usr/lib/jvm/java-11-openjdk-amd64/bin/javac th
 > Error:
 > 
 
-![Screenshot 2023-01-27 at 9.31.35 AM.png](Hadoop%20Installation%20Steps%20879d72b111df4ca0a5c9cf45aace2f49/Screenshot_2023-01-27_at_9.31.35_AM.png)
+![./Hadoop-Installation-Steps/Screenshot 2023-01-27 at 9.31.35 AM.png](Hadoop%20Installation%20Steps%20879d72b111df4ca0a5c9cf45aace2f49/Screenshot_2023-01-27_at_9.31.35_AM.png)
 
 > Solution:
 > 
@@ -264,7 +264,7 @@ Example : If Your output is like /usr/lib/jvm/java-11-openjdk-amd64/bin/javac th
 
 The output of above code will look like
 
-![Screenshot 2023-01-26 at 11.59.01 PM.png](Hadoop%20Installation%20Steps%20879d72b111df4ca0a5c9cf45aace2f49/Screenshot_2023-01-26_at_11.59.01_PM.png)
+![./Hadoop-Installation-Steps/Screenshot 2023-01-26 at 11.59.01 PM.png](Hadoop%20Installation%20Steps%20879d72b111df4ca0a5c9cf45aace2f49/Screenshot_2023-01-26_at_11.59.01_PM.png)
 
 1. Access Hadoop Web UI
 
